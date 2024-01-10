@@ -163,7 +163,7 @@ const updateUser = (req, res) => {
                         if(result.ProfilePicture==null||undefined||''){
                             result.ProfilePicture=req.body.ProfilePicture
                         }
-                        else if {
+                        else {
                         fs.unlinkSync('server/public/' + result.ProfilePicture)
                
                         result.ProfilePicture = req.body.ProfilePicture
