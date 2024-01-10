@@ -40,7 +40,7 @@ router.use(require('../middleware/tokenChecker'))
 // User
 router.post("/alluser", userController.getAllUser)
 router.post("/single", userController.getSingle)
-router.post("/update", userController.updateUser)
+// router.post("/update", userController.updateUser)
 router.post("/status", userController.updatestatus)
 
 // Thread
