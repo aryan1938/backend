@@ -51,8 +51,7 @@ router.use(require('../middleware/tokenChecker'));
 // User
 
 
-router.post("/update", uploadUser.single('ProfilePicture'), userController.updateUser)
-router.post("/status", userController.updatestatus)
+router.post("/user/update", uploadUser.single('ProfilePicture'), userController.updateUser)
 
 // Thread
 router.post("/add/thread", threadController.addThread)
