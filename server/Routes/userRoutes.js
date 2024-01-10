@@ -49,8 +49,6 @@ router.post("/single/reply", replyController.getSingle)
 router.use(require('../middleware/tokenChecker'));
 
 // User
-
-
 router.post("/user/update", uploadUser.single('ProfilePicture'), userController.updateUser)
 
 // Thread
