@@ -160,14 +160,8 @@ const updateUser = (req, res) => {
                         result.Password = bcrypt.hashSync(req.body.Password, 10)
                     }
                     if (!!req.body.ProfilePicture) {
-                        if(result.ProfilePicture==null||undefined||''){
-                            result.ProfilePicture=req.body.ProfilePicture
-                        }
-                        else {
                         fs.unlinkSync('server/public/' + result.ProfilePicture)
-               
                         result.ProfilePicture = req.body.ProfilePicture
-                        }
                     }
 
                     let prevUser = await User.findOne({ Email: (req.body.Email) })
